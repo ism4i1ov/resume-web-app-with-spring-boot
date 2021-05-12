@@ -2,6 +2,7 @@ package az.company.resume.controller;
 
 import az.company.resume.dto.request.UserDto;
 import az.company.resume.service.HomePageService;
+import javassist.NotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,5 +23,10 @@ public class HomePageController {
         UserDto user = homePageService.getUser();
         model.addAttribute("user", user);
         return "index";
+    }
+
+    @GetMapping("/*")
+    public void getNotFoundPage() throws NotFoundException {
+        throw new NotFoundException("Not found");
     }
 }

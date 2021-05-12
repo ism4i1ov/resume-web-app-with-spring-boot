@@ -55,6 +55,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Manual add -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>2.3.4.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
